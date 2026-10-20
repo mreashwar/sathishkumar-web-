@@ -16,7 +16,7 @@ Open `index.html` in a modern browser. For best results, run a local server:
 - Python: `python -m http.server 8000` and visit `http://localhost:8000`
 
 ## Video behaviour
-The hero uses the walking clip and then the seated clip as a muted background sequence. Browsers commonly block autoplay with sound, so the visitor must press **Play introduction with sound** to hear audio. The sound button plays the seated clip with audio; the second video file must contain an audio track for voice to be audible. If the video files have no audio, add a voice-over track to the MP4 before replacing the file.
+The hero is a full-viewport section background and uses the walking clip followed by the seated clip as a muted background sequence. It scrolls away with the hero section rather than remaining fixed over the whole site. Browsers commonly block autoplay with sound, so the visitor must press **Play introduction with sound** to hear audio. The sound button uses the browser's built-in speech synthesis to narrate the introduction after a click, so voice does not depend on the MP4 containing dialogue. Voice quality depends on installed browser/system voices. The raw MP4 audio remains available in the standalone video player. If the video files have no audio, add a voice-over track to the MP4 before replacing the file.
 
 The video is also included in a normal controls-enabled player under “Selected Introduction”.
 
@@ -36,3 +36,9 @@ To receive email leads automatically, connect the form to a backend or a form/em
 - Test the video sequence on mobile and desktop.
 - Test the WhatsApp form on a device with WhatsApp available.
 - Replace any service copy that doesn't match your actual offering.
+
+
+## Verification notes
+- The supplied clips are H.264/AAC MP4 files, 1920×1080 at 24 fps, 10 seconds each.
+- The clips contain audio streams, but that does not guarantee spoken narration. The hero's voice button therefore uses browser speech synthesis instead of assuming the source clip contains speech.
+- Autoplay with sound is blocked by many browsers; the hero starts muted and voice is started by a user click.
